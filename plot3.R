@@ -1,0 +1,7 @@
+png(filename = "Plot3.png",width = 480,height = 480,units='px')
+plot(y$newdate,as.numeric(as.character(y$Sub_metering_1)),type="l",yaxt='n',ylab= "Energy sub metering",xlab="")
+lines(y$newdate,as.numeric(as.character(y$Sub_metering_2)),col = "red")
+lines(y$newdate,as.numeric(as.character(y$Sub_metering_3)),col = "blue")
+axis(side = 2,at=seq(0,30,by=10))
+legend("topright",legend=c("sub_metering_1","sub_metering_2","sub_metering_3"),col = c("black","red","blue"),lty = c(1) )
+dev.off()
